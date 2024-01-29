@@ -31,10 +31,18 @@ const Footer = () => {
         })}
       </div>
       <div className="icons">
-        <FaGithub />
-        <FaLinkedin />
-        <FaInstagram />
-        <FaFilePdf />
+        <a href="https://github.com/Mic-hvel">
+          <FaGithub />
+        </a>
+        <a href="https://www.linkedin.com/in/temitope-ogunyemi/">
+          <FaLinkedin />
+        </a>
+        <a href="instagram.com">
+          <FaInstagram />
+        </a>
+        <a href="https://docs.google.com/document/d/1DhtbqTKuWA3DsXAFgxFAnZhP_irFCOBGHXkQXYYoS1U">
+          <FaFilePdf />
+        </a>
       </div>
       <div className="copyright">
         {" "}

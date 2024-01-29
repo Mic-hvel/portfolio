@@ -1,24 +1,23 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./compponents/About";
 import Footer from "./compponents/Footer";
 import Header from "./compponents/Header";
-import MarqueeSlides from "./compponents/MarqueeSlides";
+import Project from "./pages/Project";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="header">
-        <Header />
-      </header>
-      <body>
-        <About />
-        <MarqueeSlides />
-      </body>
-      <footer>
+    <>
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/project" element={<Project />} />
+        </Routes>
         <Footer />
-      </footer>
-    </div>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;

@@ -1,12 +1,12 @@
 import React from "react";
-import "./marquee.css";
+import "./marquee.scss";
 import Marquee from "react-fast-marquee";
 import {
   faGithub,
-  faGolang,
   faNodeJs,
   faReact,
   faPython,
+  faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,7 +33,7 @@ const MarqueeSlides = () => {
             <FontAwesomeIcon icon={faDatabase} />
           </span>
           <span className="icon">
-            <FontAwesomeIcon icon={faGolang} />
+            <FontAwesomeIcon icon={faVuejs} />
           </span>
         </div>
       </Marquee>

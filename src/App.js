@@ -8,8 +8,8 @@ import Project from "./pages/Project";
 const App = () => {
   return (
     <>
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/project" element={<Project />} />

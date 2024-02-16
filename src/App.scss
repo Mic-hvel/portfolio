@@ -50,13 +50,35 @@ body {
   margin-bottom: 90px;
 }
 
-.header-nav span a {
+.header-nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
   margin-right: 25px;
   text-decoration: none;
   border: #cdc5b9 solid 0.01rem;
   padding: 2px 12px;
   border-radius: 5px;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.header-nav ul a {
+  margin-right: 25px;
+  text-decoration: none;
+  border: #cdc5b9 solid 0.01rem;
+  padding: 2px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 /* 
@@ -136,4 +158,62 @@ section {
 .story {
   margin-right: 40px;
   margin-top: 80px;
+}
+
+#app {
+  &[data-state="loading"] {
+    background: orange;
+  }
+
+  &[data-state="success"] {
+    background: red;
+  }
+
+  &[data-state="successor"] {
+    background: green;
+  }
+
+  &[data-state="successful"] {
+    background: violet;
+  }
+}
+
+button {
+  width: 20px;
+  height: 20px;
+  list-style-type: none;
+  background-color: #797872;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header-nav ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+svg {
+  position: relative;
+  vertical-align: middle;
+  fill: #cdc5b9;
+  padding-right: 5px;
+  height: 12px;
+}
+
+.dark-theme {
+  background-color: gold;
+}
+
+.light-theme {
+  background-color: purple;
+}
+
+.light {
+  background-color: rgb(222, 149, 14);
+}
+
+.violet {
+  background-color: green;
 }

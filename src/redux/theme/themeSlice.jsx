@@ -9,13 +9,13 @@ const themeSlice = createSlice({
   initialState,
   reducers: {
     lightTheme: (state) => {
-      state.theme = "light";
+      state.theme = "light-theme";
     },
-    goldTheme: (state) => {
+    goldTheme: (state, action) => {
       state.theme = "dark-theme";
     },
     orangeTheme: (state) => {
-      state.theme = "light-theme";
+      state.theme = "light";
     },
     violetTheme: (state) => {
       state.theme = "violet";

@@ -1,31 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import MarqueeSlides from "./MarqueeSlides";
 import { useSelector, useDispatch } from "react-redux";
 import {
   goldTheme,
   lightTheme,
-  violetTheme,
   orangeTheme,
+  violetTheme,
 } from "../redux/theme/themeSlice";
 
 const About = () => {
-  const [color, setColor] = useState("");
   const theme = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
-  function handleThemeChange(theme) {
+  console.log(theme);
+
+  function handleThemeChange() {
+    if (theme === "violet") {
+      dispatch(violetTheme());
+    }
+    if (theme === "light-theme") {
+      dispatch(goldTheme());
+    }
+    if (theme === "dark-theme") {
+      dispatch(orangeTheme());
+    }
     if (theme === "light") {
-      dispatch(goldTheme(color));
-      setColor("");
-    } else if (theme === "dark-theme") {
-      dispatch(lightTheme(color));
-      setColor("");
-    } else if (theme === "light-theme") {
-      dispatch(violetTheme(color));
-      setColor("");
-    } else {
-      dispatch(orangeTheme(color));
-      setColor("");
+      dispatch(lightTheme());
     }
   }
 
@@ -40,9 +40,10 @@ const About = () => {
           <div className="contact">
             <ul>
               <li>
-                <button className="button" onClick={handleThemeChange}>
-                  {theme}
-                </button>
+                <button
+                  className="button"
+                  onClick={() => handleThemeChange()}
+                ></button>
               </li>
               <li>
                 <a

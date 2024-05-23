@@ -9,12 +9,11 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className={theme ? "dark-theme" : "light-theme"}>
+      <div>
         <div className="header-content">
           <div className="pp">
             <img src="./images/header.jpeg" alt="profile" />{" "}
           </div>
-
           <div className="header-nav">
             <ul>
               <li>

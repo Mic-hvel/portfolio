@@ -7,7 +7,7 @@ import Project from "./pages/Project";
 
 const App = () => {
   return (
-    <>
+    <div className="all">
       <BrowserRouter>
         <Header />
         <Routes>
@@ -16,7 +16,7 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 };
 

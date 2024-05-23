@@ -12,8 +12,6 @@ const About = () => {
   const theme = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
-  console.log(theme);
-
   function handleThemeChange() {
     if (theme === "violet") {
       dispatch(violetTheme());
@@ -30,20 +28,20 @@ const About = () => {
   }
 
   return (
-    <div className={theme}>
+    <div>
       <div className="about">
         <div className="name">
           <h1>Hello,</h1>
-          <h1>I'm Temitope</h1>
+          <h1>I'm Michael</h1>
         </div>
         <section>
           <div className="contact">
             <ul>
               <li>
-                <button
+                {/* <button
                   className="button"
                   onClick={() => handleThemeChange()}
-                ></button>
+                ></button> */}
               </li>
               <li>
                 <a

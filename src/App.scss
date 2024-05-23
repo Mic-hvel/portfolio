@@ -62,9 +62,15 @@ body {
   padding: 2px 12px;
   border-radius: 5px;
   text-decoration: none;
+  transition-property: transform;
+  transition-duration: 0.3s;
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &:active {
+    transform: translateY(10%);
   }
 }
 
@@ -75,9 +81,14 @@ body {
   padding: 2px 12px;
   border-radius: 5px;
   text-decoration: none;
+  transition-property: transform background-color;
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &:active {
+    transform: translateY(30%);
   }
 }
 
@@ -123,6 +134,7 @@ body {
 .name {
   font-size: 20px;
   margin-left: 35px;
+  margin-top: -50px;
 }
 
 .contact {
@@ -158,24 +170,6 @@ section {
 .story {
   margin-right: 40px;
   margin-top: 80px;
-}
-
-#app {
-  &[data-state="loading"] {
-    background: orange;
-  }
-
-  &[data-state="success"] {
-    background: red;
-  }
-
-  &[data-state="successor"] {
-    background: green;
-  }
-
-  &[data-state="successful"] {
-    background: violet;
-  }
 }
 
 button {
